@@ -38,7 +38,7 @@ const Sidebar = () => {
                     icon={item.icon}
                     />
                 ))}
-                <SidebarItem onClick={() => {}} label="Logout" icon={BiLogOut} />
+                <SidebarItem onClick={() => {}} label="Logout" icon={BiLogOut} href="/" />
                 <SidebarPostButton />
             </div>
         </div>
