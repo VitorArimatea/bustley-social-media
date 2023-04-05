@@ -1,7 +1,8 @@
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-white text-2xl text-center">Em desenvolvimento...</h1>
+    <div className="flex flex-col items-center">
+      <h1 className="text-white text-xl">Aqui é onde irão ficar as postagens.</h1>
+      <span className="text-blue-800 text-lg">Em desenvolvimento...</span>
     </div>
   );
 };
