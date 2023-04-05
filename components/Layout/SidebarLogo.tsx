@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-import { BsTwitter } from "react-icons/bs";
+import { IoIosRocket } from "react-icons/io"
 
 const SidebarLogo = () => {
     const router = useRouter();
@@ -13,16 +13,16 @@ const SidebarLogo = () => {
         flex
         items-center
         justify-center
-        h-14
-        w-14
+        h-18
+        w-18
         p-4
         rounded-full
-        hover:bg-blue-300
+        hover:bg-blue-900
         hover:bg-opacity-10
         cursor-pointer
         transition    
     ">
-        <BsTwitter size={28} color="lightblue" />        
+        <IoIosRocket size={35} color="blue" />        
     </div>  
   );
 };
