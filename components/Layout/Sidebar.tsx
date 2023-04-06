@@ -10,16 +10,16 @@ const Sidebar = () => {
     const items = [
         {
             label: "Início",
-            href: "https://github.com/VitorArimatea",
+            href: "/home",
             icon: BsHouseFill,
         },
         {
-            label: "Notifications",
+            label: "Notificações",
             href: "/notifications",
             icon: BsBellFill,
         },
         {
-            label: "Profile",
+            label: "Perfil",
             href: "/users/123",
             icon: FaUser,
         },
