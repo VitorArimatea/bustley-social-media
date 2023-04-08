@@ -7,8 +7,8 @@ import Input from "../Input";
 import Modal from "../Modal";
 
 const RegisterModal = () => {
-    const loginModal = useLoginModal;
-    const registerModal = useRegisterModal;
+    const loginModal = useLoginModal();
+    const registerModal = useRegisterModal();
     
     const [ email, setEmail ] = useState('');
     const [ password, setPassword ] = useState('');
@@ -73,13 +73,13 @@ const RegisterModal = () => {
         <div className="text-neutral-400 text-center mt-4">
             <p>Você já possui uma conta?</p>
             <span
-                onClick={ontoggle}
+                onClick={onToggle}
                 className="
                     text-white
                     cursor-pointer
                     hover:underline
                 "
-            >Sign in</span>
+            >Entrar</span>
         </div>
     )
 
