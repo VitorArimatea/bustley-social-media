@@ -1,12 +1,16 @@
 import { BsBellFill, BsHouseFill } from 'react-icons/bs';
 import { FaUser } from 'react-icons/fa';
 import { BiLogOut } from 'react-icons/bi';
+import { signOut } from 'next-auth/react';
+
+import useCurrentUser from '@/hooks/useCurrentUser';
 
 import SidebarLogo from './SidebarLogo';
 import SidebarItem from './SidebarItem';
 import SidebarPostButton from './SidebarPostButton';
 
 const Sidebar = () => {
+    const { data: currentUser } = useCurrentUser();
     const items = [
         {
             label: "Início",
@@ -38,7 +42,9 @@ const Sidebar = () => {
                     icon={item.icon}
                     />
                 ))}
-                <SidebarItem onClick={() => {}} label="Logout" icon={BiLogOut} href="/" />
+                {currentUser && (
+                    <SidebarItem onClick={() => signOut} label="Logout" icon={BiLogOut} href="/" />
+                )}
                 <SidebarPostButton />
             </div>
         </div>
