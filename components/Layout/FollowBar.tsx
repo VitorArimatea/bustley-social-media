@@ -24,7 +24,7 @@ const Followbar = () => {
                 </p>
               </div>
             </div>
-          ))}; 
+          ))}
         </div>
       </div>
     </div>
