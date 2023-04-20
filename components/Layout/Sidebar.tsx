@@ -11,21 +11,24 @@ import SidebarPostButton from './SidebarPostButton';
 
 const Sidebar = () => {
     const { data: currentUser } = useCurrentUser();
+    
     const items = [
         {
             label: "Início",
-            href: "/home",
+            href: "/",
             icon: BsHouseFill,
         },
         {
             label: "Notificações",
             href: "/notifications",
             icon: BsBellFill,
+            auth: true,
         },
         {
             label: "Perfil",
-            href: "/users/123",
+            href: `/users/${currentUser?.id}`,
             icon: FaUser,
+            auth: true,
         },
     ]
 
@@ -40,10 +43,11 @@ const Sidebar = () => {
                     label={item.label}
                     href={item.href}
                     icon={item.icon}
+                    auth={item.auth}
                     />
                 ))}
                 {currentUser && (
-                    <SidebarItem onClick={() => signOut} label="Logout" icon={BiLogOut} href="/" />
+                    <SidebarItem onClick={() => signOut()} label="Logout" icon={BiLogOut} href="/" />
                 )}
                 <SidebarPostButton />
             </div>
