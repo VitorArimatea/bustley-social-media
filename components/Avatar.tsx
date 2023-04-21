@@ -28,12 +28,11 @@ const Avatar: React.FC<AvatarProps> = ({
     }, [router, userId]);
   return (
     <div className={` 
-        ${hasBorder ? 'border-4 border-black' : ''}
+        ${hasBorder ? 'border-2 border-neutral-700' : ''}
         ${isLarge ? 'h-32' : 'h-12' }
         ${isLarge ? 'w-32' : 'w-12' }
         relative
         rounded-full
-        hover:opacity-90
         cursor-pointer
         transition
     `}>
@@ -48,7 +47,7 @@ const Avatar: React.FC<AvatarProps> = ({
             src={fetchedUser?.profileImage || '/images/profile-default.png'}
         />
     </div>
-  )
+  );
 }
 
 export default Avatar;
